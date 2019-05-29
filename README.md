@@ -12,7 +12,7 @@ The Meminfo library offers you the possibility to read the current data directly
 ```java
 MemoryInfoParserFactory memoryInfoParserFactory = MemoryInfoParserFactory.create();
 
-try {
+ try {
   memoryInfoParserFactory.getFieldsFromFile().forEach(memoryInfoFileField -> {
     System.out.println("KEY: " + memoryInfoFileField.key());
     System.out.println("VALUE: " + memoryInfoFileField.value());
