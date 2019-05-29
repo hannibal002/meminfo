@@ -12,6 +12,7 @@
   <modules>
     <module>meminfo-parser</module>
     <module>meminfo-unit</module>
+    <module>meminfo-all</module>
   </modules>
 
 </project>
