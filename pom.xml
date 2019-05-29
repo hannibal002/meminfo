@@ -9,6 +9,10 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
+  <name>Meminfo</name>
+  <inceptionYear>2019</inceptionYear>
+  <url>https://github.com/manuelkollus/meminfo</url>
+
   <modules>
     <module>meminfo-parser</module>
     <module>meminfo-unit</module>
