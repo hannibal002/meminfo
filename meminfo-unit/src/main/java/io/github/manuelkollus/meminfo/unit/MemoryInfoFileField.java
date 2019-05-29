@@ -11,6 +11,12 @@ import java.util.Objects;
  */
 public final class MemoryInfoFileField {
 
+  private static final class Lazy {
+
+    private static final MemoryInfoFileField EMPTY =
+      create("", "", MemoryInfoUnit.NONE);
+  }
+
   private final String key;
   private final String value;
   private final MemoryInfoUnit memoryInfoUnit;
@@ -68,6 +74,10 @@ public final class MemoryInfoFileField {
       ", value='" + value + '\'' +
       ", memoryInfoUnit=" + memoryInfoUnit +
       '}';
+  }
+
+  public static MemoryInfoFileField empty() {
+    return Lazy.EMPTY;
   }
 
   public static MemoryInfoFileField create(
