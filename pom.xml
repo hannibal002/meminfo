@@ -15,4 +15,25 @@
     <module>meminfo-all</module>
   </modules>
 
+  <distributionManagement>
+    <repository>
+      <id>packagecloud-manuelkollus</id>
+      <url>packagecloud+https://packagecloud.io/manuelkollus/opensource</url>
+    </repository>
+    <snapshotRepository>
+      <id>packagecloud-manuelkollus</id>
+      <url>packagecloud+https://packagecloud.io/manuelkollus/opensource</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>io.packagecloud.maven.wagon</groupId>
+        <artifactId>maven-packagecloud-wagon</artifactId>
+        <version>0.0.6</version>
+      </extension>
+    </extensions>
+  </build>
+
 </project>
