@@ -13,7 +13,7 @@ public enum MemoryInfoUnit {
   AMOUNT(""),
   NONE("");
 
-  private String unit;
+  private final String unit;
 
   MemoryInfoUnit(String unit) {
     this.unit = unit;
