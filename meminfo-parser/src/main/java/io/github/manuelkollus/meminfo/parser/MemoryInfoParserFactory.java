@@ -35,11 +35,11 @@ public final class MemoryInfoParserFactory {
 
     return Files.readAllLines(path)
       .stream()
-      .map(validateString())
+      .map(parseLine())
       .collect(Collectors.toList());
   }
 
-  private Function<String, MemoryInfoFileField> validateString() {
+  private Function<String, MemoryInfoFileField> parseLine() {
     return line -> line.contains("kB") ? memoryInfoParser.parseWithUnit(line) :
       memoryInfoParser.parseWithoutUnit(line);
   }
