@@ -22,8 +22,8 @@ public final class MemoryInfoParserFactory {
 
   private static final Path PATH = Paths.get("proc/meminfo");
 
-  private Path path;
-  private MemoryInfoParser memoryInfoParser;
+  private final Path path;
+  private final MemoryInfoParser memoryInfoParser;
 
   private MemoryInfoParserFactory(Path path) {
     this.path = path;
