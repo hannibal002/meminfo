@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  */
 public final class MemoryInfoParserFactory {
 
-  private static final Path PATH = Paths.get("proc/meminfo");
+  private static final Path PATH = Paths.get("/proc/meminfo");
 
   private final Path path;
   private final MemoryInfoParser memoryInfoParser;
