@@ -19,4 +19,16 @@ public final class MemoryInfoParserTest {
     assertEquals("5997568", fileField.value());
     assertEquals(MemoryInfoUnit.KILO_BYTES, fileField.memoryInfoUnit());
   }
+
+  @Test
+  public void parseToMemoryInfoWithoutUnit() {
+    MemoryInfoParser memoryInfoParser = new MemoryInfoParser();
+
+    MemoryInfoFileField fileField = memoryInfoParser
+      .parseWithoutUnit("HugePages_Total:     0");
+
+    assertEquals("HugePages_Total", fileField.key());
+    assertEquals("0", fileField.value());
+    assertEquals(MemoryInfoUnit.AMOUNT, fileField.memoryInfoUnit());
+  }
 }
