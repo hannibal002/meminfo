@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public final class MemoryInfoParserTest {
 
   @Test
-  public void parseToMemoryInfo() {
+  public void parseToMemoryInfoWithUnit() {
     MemoryInfoParser memoryInfoParser = new MemoryInfoParser();
 
     MemoryInfoFileField fileField = memoryInfoParser
